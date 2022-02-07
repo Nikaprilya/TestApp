@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Button btnActTwo;
     static {
         System.loadLibrary("testapp");
     }
@@ -30,7 +30,21 @@ public class MainActivity extends AppCompatActivity {
         adapter1 = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, name());
         listView1.setAdapter(adapter1);
+
+        btnActTwo = (Button) findViewById(R.id.btnActTwo);
+        btnActTwo.setOnClickListener(this::onClick);
     }
     private native String[] phone();
     private native String[] name();
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btnActTwo:
+                Intent intent = new Intent(this, PhoneInfo.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
 }
