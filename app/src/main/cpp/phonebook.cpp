@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-extern "C" JNIEXPORT jobjectArray JNICALL Java_com_example_a2_MainActivity_phone(JNIEnv *env, jobject jobj){
+extern "C" JNIEXPORT jobjectArray JNICALL Java_com_example_testapp_MainActivity_phone(JNIEnv *env, jobject jobj){
 
     jobjectArray ter;
     int i;
@@ -22,7 +22,7 @@ extern "C" JNIEXPORT jobjectArray JNICALL Java_com_example_a2_MainActivity_phone
     return(ter);
 }
 
-extern "C" JNIEXPORT jobjectArray JNICALL Java_com_example_a2_MainActivity_name (JNIEnv *env, jobject jobj){
+extern "C" JNIEXPORT jobjectArray JNICALL Java_com_example_testapp_MainActivity_name (JNIEnv *env, jobject jobj){
 
     jobjectArray ret;
     int i;
